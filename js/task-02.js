@@ -9,20 +9,32 @@ const ingredients = [
 
 const ulEl = document.querySelector('ul');
 
-const elements = [];
 
-for (let i = 0; i < ingredients.length; i+=1) {
-  const element = ingredients[i];
-
+const elements = ingredients.map((ingredient) => {
   const liEl = document.createElement('li');
   liEl.classList.add('item');
-  liEl.textContent = ingredients[i];
+  liEl.textContent = ingredient;
 
-  elements.push(liEl);
-}
+  return liEl;
+})
 
 console.log(elements);
-
 ulEl.append(...elements);
+
+// const elements = [];
+
+// for (let i = 0; i < ingredients.length; i+=1) {
+//   const element = ingredients[i];
+
+//   const liEl = document.createElement('li');
+//   liEl.classList.add('item');
+//   liEl.textContent = ingredients[i];
+
+//   elements.push(liEl);
+// }
+
+// console.log(elements);
+
+// ulEl.append(...elements);
 
 
