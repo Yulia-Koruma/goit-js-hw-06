@@ -1,14 +1,13 @@
-const formInputRef = document.querySelector("#name-input");
-const formOutputRef = document.querySelector("#name-output");
+const inputText = document.querySelector('#name-input');
+const outputText = document.querySelector('#name-output');
 
-formInputRef.addEventListener("input", onInputChange);
+inputText.addEventListener('input', onInput);
 
-function onInputChange(event) {
-    if (formInputRef.value === '') {
-        formOutputRef.textContect = 'Anonymous';
+function onInput(event) {
+    if (event.currentTarget.value.length < 1) {
+        return outputText.textContent = "Anonymous";
     }
-    else {
-        formOutputRef.textContent = event.currentTarget.value;
-    }
+
+    outputText.textContent = event.currentTarget.value;
 }
 
