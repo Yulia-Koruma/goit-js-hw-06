@@ -19,7 +19,7 @@ const listImageEl = [];
 
 images.map(({ url, alt }) => {
   const itemListEl = document.createElement('li');
-  itemListEl.insertAdjacentHTML('beforeend', `<img scr= '${url}' alt = '${alt}'>`);
+  itemListEl.insertAdjacentHTML('beforeend', `<img scr= '${url}' alt = '${alt}'></img>`);
   listImageEl.push(itemListEl);
   }
 )  
