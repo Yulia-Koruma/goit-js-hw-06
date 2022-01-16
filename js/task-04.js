@@ -14,10 +14,12 @@ const valueRef = document.querySelector('#value');
 
 incrementBtnRef.addEventListener('click', () => {
 	counterValue.increment();
-	valueRef.textContent = counterValue.value;
+    valueRef.textContent = counterValue.value;
+    console.log("click");
 });
 
 decrementBtnRef.addEventListener('click', () => {
 	counterValue.decrement();
-	valueRef.textContent = counterValue.value;
+    valueRef.textContent = counterValue.value;
+    console.log("click");
 });
